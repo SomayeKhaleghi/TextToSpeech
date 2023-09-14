@@ -24,7 +24,14 @@ protected void onCreate(Bundle savedInstanceState){
     binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
     editTxt = binding.edittxt;
     btn =  binding.btn;
-   
+    textToSpeech = new TextToSpeech(getApplicationContext(), status -> {
+        if (status ==TextToSpeech.SUCCESS)
+        {
+            int language = textToSpeech.setLanguage(Locale.ENGLISH);
+        }
+    });
+
+  
 }
 //---------------------------------------------------------------------------------------------------------
 }
