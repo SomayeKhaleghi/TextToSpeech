@@ -31,7 +31,10 @@ protected void onCreate(Bundle savedInstanceState){
         }
     });
 
-  
+    btn.setOnClickListener(v -> {
+        String s = editTxt.getText().toString();
+        int speech  =  textToSpeech.speak(s, textToSpeech.QUEUE_FLUSH , null);
+    });
 }
 //---------------------------------------------------------------------------------------------------------
 }
